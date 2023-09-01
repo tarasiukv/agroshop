@@ -5,52 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ea6d0ef-d4f6-4bbc-9f00-76f15a6269e6" name="Changes" comment="New Project files">
-      <change beforePath="$PROJECT_DIR$/giftos-html/contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/css/style.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/css/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/shop.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/testimonial.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/giftos-html/why.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/style.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/fonts/octin_sports_rg.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/agency-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/free.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/gifts.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/high-quality.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/p1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/p2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/p3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/p4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/p5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/p6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/p7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/p8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/purse.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/saving-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/slider-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/slider-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/images/truck.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/jquery-3.4.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/component/pages/CartComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/HeaderComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/ContactComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/ContactComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/router/routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Vue Composition API Component" />
-        <option value="Vue Options API Component" />
         <option value="JavaScript File" />
+        <option value="Vue Options API Component" />
       </list>
     </option>
   </component>
@@ -212,7 +171,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/var/www/html/agroshop.local.com/resources/js/src/component/pages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -263,7 +222,7 @@
       <workItem from="1693387174420" duration="797000" />
       <workItem from="1693400129469" duration="8422000" />
       <workItem from="1693473925833" duration="3124000" />
-      <workItem from="1693562175536" duration="16785000" />
+      <workItem from="1693562175536" duration="19799000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <option name="closed" value="true" />

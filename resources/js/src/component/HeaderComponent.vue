@@ -13,7 +13,7 @@
     <div class="humberger__menu__cart">
       <ul>
         <li><a href="#"><i class="fa fa-heart"></i> <span>{{ myItem }}</span></a></li>
-        <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>{{ cartItem }}</span></a></li>
+        <li><a href="/cart"><i class="fa fa-shopping-bag"></i> <span>{{ cartItem }}</span></a></li>
       </ul>
       <div class="header__cart__price">item: <span>{{ counter }}</span></div>
     </div>
@@ -34,20 +34,13 @@
     <nav class="humberger__menu__nav mobile-menu">
       <ul>
         <li v-for="link in links">
-          <router-link :to="link.href">
-            {{ link.title }}
-          </router-link>
-        </li>
-        <li><a href="#">Pages</a>
-          <ul class="header__menu__dropdown">
-            <li><a href="./shop">Shop Details</a></li>
-            <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-            <li><a href="./checkout.html">Check Out</a></li>
-            <li><a href="./blog-details.html">Blog Details</a></li>
+          <router-link :to="link.href">{{ link.title }}</router-link>
+          <ul v-if="link.subLinks" class="header__menu__dropdown">
+            <li v-for="subLink in link.subLinks" :key="subLink.href">
+              <router-link :to="subLink.href">{{ subLink.title }}</router-link>
+            </li>
           </ul>
         </li>
-        <li><a href="./blog.html">Blog</a></li>
-        <li><a href="./contact.html">Contact</a></li>
       </ul>
     </nav>
     <div id="mobile-menu-wrap"></div>
@@ -114,19 +107,12 @@
             <ul>
               <li v-for="link in links">
                 <router-link :to="link.href">{{ link.title }}</router-link>
-              </li>
-
-
-              <li><a href="#">Pages</a>
-                <ul class="header__menu__dropdown">
-                  <li><a href="./shop">Shop Details</a></li>
-                  <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                  <li><a href="./checkout.html">Check Out</a></li>
-                  <li><a href="./blog-details.html">Blog Details</a></li>
+                <ul v-if="link.subLinks" class="header__menu__dropdown">
+                  <li v-for="subLink in link.subLinks" :key="subLink.href">
+                    <router-link :to="subLink.href">{{ subLink.title }}</router-link>
+                  </li>
                 </ul>
               </li>
-
-
             </ul>
           </nav>
         </div>
@@ -134,10 +120,12 @@
           <div class="header__cart">
             <ul>
               <li><a href="#"><i class="fa fa-heart"></i> <span>1</span></a></li>
-              <li><a href="#"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
+              <li><a href="/cart"><i class="fa fa-shopping-bag"></i> <span>3</span></a></li>
             </ul>
             <div class="header__cart__price">item: <span>{{  counter }}</span></div>
+
             <button @click="increment"></button>
+
           </div>
         </div>
       </div>
@@ -157,17 +145,9 @@
               <span>All departments</span>
             </div>
             <ul>
-              <li><a href="#">Fresh Meat</a></li>
-              <li><a href="#">Vegetables</a></li>
-              <li><a href="#">Fruit & Nut Gifts</a></li>
-              <li><a href="#">Fresh Berries</a></li>
-              <li><a href="#">Ocean Foods</a></li>
-              <li><a href="#">Butter & Eggs</a></li>
-              <li><a href="#">Fastfood</a></li>
-              <li><a href="#">Fresh Onion</a></li>
-              <li><a href="#">Papayaya & Crisps</a></li>
-              <li><a href="#">Oatmeal</a></li>
-              <li><a href="#">Fresh Bananas</a></li>
+              <li v-for="subLink in links.subLinks" :key="subLink.href">
+                <router-link :to="subLink.href">{{ subLink.title }}</router-link>
+              </li>
             </ul>
           </div>
         </div>
@@ -208,17 +188,31 @@ export default defineComponent({
       links: [
         {
           title: "Home",
-          href: '/'
+          href: '/',
         },
         {
           title: "Shop",
-          href: '/shop'
+          href: '/shop',
+          subLinks: [
+            {
+              title: "Seed",
+              href: '/seed',
+            },
+            {
+              title: 'Means of protection',
+              href: '/meansOfProtection',
+            },
+            {
+              title: 'Fertilizers and soils',
+              href: '/fertilizersAndSoils'
+            }
+          ]
         },
         {
           title: "Contact",
-          href: '/contact'
-        }
-      ]
+          href: '/contact',
+        },
+      ],
     }
   },
   components: {},
