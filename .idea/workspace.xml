@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ea6d0ef-d4f6-4bbc-9f00-76f15a6269e6" name="Changes" comment="Add MVC">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/hot" beforeDir="false" />
-    </list>
+    <list default="true" id="2ea6d0ef-d4f6-4bbc-9f00-76f15a6269e6" name="Changes" comment="Add MVC" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -223,6 +220,7 @@
       <workItem from="1693649514237" duration="7685000" />
       <workItem from="1693815289190" duration="17000" />
       <workItem from="1693816010837" duration="6000" />
+      <workItem from="1693824091398" duration="13000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <option name="closed" value="true" />

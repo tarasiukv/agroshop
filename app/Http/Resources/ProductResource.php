@@ -20,7 +20,7 @@ class ProductResource extends JsonResource
             'description' => $this->description,
             'price' => $this->price,
             'status' => $this->status,
-//            'category_id' => new CategoryResource($this->whenLoaded('answeredByUser')),
+            'category_id' => $this->category_id,
             'created_at' => $this->created_at ? $this->created_at->format('d.m.Y, H:i') : null,
             'updated_at' => $this->updated_at ? $this->updated_at->format('d.m.Y, H:i') : null,
         ];

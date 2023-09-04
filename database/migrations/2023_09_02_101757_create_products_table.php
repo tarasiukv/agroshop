@@ -17,10 +17,10 @@ return new class extends Migration
             $table->text('description');
             $table->decimal('price', 8,2);
             $table->string('status');
-            $table->foreignId('category_id')->nullable()
-                ->constrained('categories')
-                ->onUpdate('cascade')
-                ->nullOnDelete();
+//            $table->foreignId('category_id')->nullable()
+//                ->constrained('categories')
+//                ->onUpdate('cascade')
+//                ->nullOnDelete();
             $table->timestamps();
         });
     }

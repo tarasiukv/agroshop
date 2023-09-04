@@ -17,14 +17,14 @@ return new class extends Migration
             $table->string('status');
             $table->string('quantity');
             $table->decimal('price', 8,2);
-            $table->foreignId('user_id')->nullable()
-                ->constrained('user')
-                ->onUpdate('cascade')
-                ->nullOnDelete();
-            $table->foreignId('product_id')->nullable()
-                ->constrained('product')
-                ->onUpdate('cascade')
-                ->nullOnDelete();
+//            $table->foreignId('user_id')->nullable()
+//                ->constrained('user')
+//                ->onUpdate('cascade')
+//                ->nullOnDelete();
+//            $table->foreignId('product_id')->nullable()
+//                ->constrained('product')
+//                ->onUpdate('cascade')
+//                ->nullOnDelete();
             $table->timestamps();
         });
     }

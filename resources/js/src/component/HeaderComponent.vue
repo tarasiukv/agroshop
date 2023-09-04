@@ -46,7 +46,7 @@ const increment = () => {
 }
 
 onMounted(() => {
-document.querySelector('.hero__categories__all').addEventListener('click', function() {
+    document.querySelector('.hero__categories__all').addEventListener('click', function () {
         console.log('435654643643vgerhtye5h6h43643');
         var categoriesList = document.querySelector('.hero__categories ul');
         if (categoriesList.style.display === 'none' || categoriesList.style.display === '') {
@@ -73,7 +73,7 @@ document.querySelector('.hero__categories__all').addEventListener('click', funct
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="#"><img src="img/logo.png" alt=""></a>
+            <a href="/"><img src="img/logo.png" alt=""></a>
         </div>
         <div class="humberger__menu__cart">
             <ul>
