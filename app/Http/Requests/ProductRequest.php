@@ -11,7 +11,7 @@ class ProductRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,8 +24,8 @@ class ProductRequest extends FormRequest
         return [
             'title' => 'nullable',
             'description' => 'nullable',
-            'price' => 'number|nullable',
-            'status' => 'boolean',
+            'price' => 'nullable',
+            'status' => 'nullable',
             'category_id' => 'nullable',
         ];
     }

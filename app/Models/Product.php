@@ -22,13 +22,11 @@ class Product extends Model
         'category_id',
     ];
 
-//    /**
-//     * The attributes that should be hidden for serialization.
-//     *
-//     * @var array<int, string>
-//     */
-//    protected $hidden = [
-//        'cart_id',
-//        'remember_token',
-//    ];
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function category() {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
 }
