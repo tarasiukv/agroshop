@@ -1,13 +1,43 @@
 <script setup>
 import axios from 'axios';
 import {onMounted, ref} from "vue";
+import {useRouter, useRoute} from "vue-router";
 
-const selectedProduct = ref();
-const products = ref([]);
-const loadProducts = async () => {
+const router = useRouter();
+
+const form = ref({
+    title: '',
+    description: '',
+    category: '',
+    // img: '',
+});
+
+const store = async () => {
+    try {
+        await axios.post('/api/products', form, {
+            headers: {
+                "Content-type": "application/json"
+            }
+        })
+            .then(res => {
+                if (res.data.status) {
+                    router.push('/shop/' + res.data.post.id)
+                }
+
+            });
+        // Ви можете додати обробку успішного збереження даних тут, наприклад, редірект або повідомлення про успішне збереження.
+    } catch (error) {
+        // Обробка помилок, якщо збереження даних не вдалося.
+        console.error('Помилка при збереженні даних:', error);
+    }
+};
+
+const selectedCategory = ref();
+const categories = ref([]);
+const loadCategories = async () => {
     try{
-        const { data } = await axios.get('/api/products');
-        products.value = data.data;
+        const { data } = await axios.get('/api/categories');
+        categories.value = data.data;
         console.log(data);
     }
     catch (e) {
@@ -16,7 +46,7 @@ const loadProducts = async () => {
 };
 
 onMounted(() => {
-    loadProducts();
+    loadCategories();
 });
 </script>
 
@@ -58,18 +88,28 @@ onMounted(() => {
     <form>
         <div class="form-group">
             <label>Title of product</label>
-            <input type="text" class="form-control" placeholder="Title of product">
+            <input
+                type="text"
+                class="form-control"
+                placeholder="Title of product"
+                v-model="form.title"
+            >
         </div>
         <label>Select category</label>
         <select
             class="form-control"
-            v-model="selectedCategory"
+            v-model="form.category"
         >
             <option v-for="category in categories" :key="category.id">{{ category.title }}</option>
         </select>
         <div class="form-group">
             <label>Description</label>
-            <textarea class="form-control" rows="3" placeholder="Description"></textarea>
+            <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Description"
+                v-model="form.description"
+            ></textarea>
         </div>
         <div class="form-group">
             <label for="exampleInputFile">Photo</label>
@@ -84,7 +124,11 @@ onMounted(() => {
             </div>
         </div>
         <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button
+                type="submit"
+                class="btn btn-primary"
+                @click.prevent="store"
+            >Submit</button>
         </div>
     </form>
 </template>

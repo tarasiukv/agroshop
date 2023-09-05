@@ -1,7 +1,24 @@
 <script>
-export default {
-    name: "BreadcrembComponent"
-}
+    import axios from 'axios';
+    import {onMounted, ref} from "vue";
+    import {useStore} from "vuex";
+
+    export default {
+        components: {},
+            data: () => ({
+                form: {
+                    title: "",
+                    description: "",
+                    category: "",
+                    img: ""
+                }
+            }),
+        methods: {
+            store() {
+                axios.post('/api/products', form.data)
+            }
+        }
+    }
 </script>
 
 <template>
