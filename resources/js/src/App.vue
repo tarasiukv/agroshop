@@ -2,24 +2,27 @@
 import {defineComponent} from "vue";
 import HeaderComponent from "./component/HeaderComponent.vue";
 import FooterComponent from "./component/FooterComponent.vue";
+import LoaderComponent from "./component/features/LoaderComponent.vue";
+
 export default defineComponent({
-  components: {
-    HeaderComponent,
-    FooterComponent,
-  },
-  setup() {
-    return {
+    components: {
+        LoaderComponent,
+        HeaderComponent,
+        FooterComponent,
+    },
+    setup() {
+        return {}
     }
-  }
 });
 </script>
 
 <template>
-  <HeaderComponent />
-  <main class="main">
-    <router-view />
-  </main>
-  <FooterComponent />
+    <LoaderComponent />
+    <HeaderComponent/>
+    <main class="main">
+        <router-view/>
+    </main>
+    <FooterComponent/>
 </template>
 
 <style scoped>

@@ -4,15 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ea6d0ef-d4f6-4bbc-9f00-76f15a6269e6" name="Changes" comment="Add MVC">
+    <list default="true" id="2ea6d0ef-d4f6-4bbc-9f00-76f15a6269e6" name="Changes" comment="Edit MVC">
+      <change afterPath="$PROJECT_DIR$/resources/js/src/component/features/LoaderComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/component/pages/shop/BreadcrembComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ProductDetailComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ShopComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Requests/BasketProductsRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BasketProductsRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_09_02_101757_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_09_02_151757_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_09_04_094117_create_basket_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_09_04_094117_create_basket_products_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/BasketProducts.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/BasketProducts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/HeaderComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddCategoryComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddCategoryComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddProductComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddProductComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/ShopComponent.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/ShopItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ShopProductComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/router/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,11 +213,11 @@
       <recent name="$PROJECT_DIR$/resources/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/src/component/pages/shop" />
       <recent name="$PROJECT_DIR$/public/assets" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/resources/js" />
       <recent name="$PROJECT_DIR$/resources/js/src/components/pages" />
-      <recent name="$PROJECT_DIR$/resources/js/src/components" />
     </key>
   </component>
   <component name="RunManager">
@@ -230,7 +243,7 @@
       <workItem from="1693815289190" duration="17000" />
       <workItem from="1693816010837" duration="6000" />
       <workItem from="1693824091398" duration="13000" />
-      <workItem from="1693908794128" duration="4771000" />
+      <workItem from="1693908794128" duration="19383000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <option name="closed" value="true" />
@@ -256,7 +269,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693663646539</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Edit MVC">
+      <option name="closed" value="true" />
+      <created>1693916351418</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1693916351418</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,6 +299,7 @@
     <MESSAGE value="New Project files" />
     <MESSAGE value="Add dropdown menu and categories" />
     <MESSAGE value="Add MVC" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add MVC" />
+    <MESSAGE value="Edit MVC" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edit MVC" />
   </component>
 </project>

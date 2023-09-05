@@ -1,5 +1,23 @@
 <script setup>
+import axios from 'axios';
+import {onMounted, ref} from "vue";
 
+const selectedCategory = ref();
+const categories = ref([]);
+const loadCategories = async () => {
+    try{
+        const { data } = await axios.get('/api/categories');
+        categories.value = data.data;
+        console.log(data);
+    }
+    catch (e) {
+        console.log(e)
+    }
+};
+
+onMounted(() => {
+    loadCategories();
+});
 </script>
 
 <style scoped>
@@ -22,24 +40,16 @@
     </div>
     <h4 class="name__page">Add category</h4>
     <form>
-        <div class="form-group">
+        <div class="form-group" >
             <label>Name of category</label>
             <input type="text" class="form-control" placeholder="Name of category">
         </div>
-        <div class="card-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </form>
-    <form>
         <label>Select category</label>
-        <select multiple class="form-control">
-            <option>category 1</option>
-            <option>category 2</option>
-            <option>category 3</option>
-            <option>category 4</option>
-            <option>category 5</option>
-            <option>category 6</option>
-            <option>category 7</option>
+        <select
+            class="form-control"
+            v-model="selectedCategory"
+        >
+            <option v-for="category in categories" :key="category.id">{{ category.title }}</option>
         </select>
         <div class="form-group">
             <label>Name of sub-category</label>

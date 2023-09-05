@@ -1,4 +1,11 @@
 <script setup>
+import { ref, defineProps } from 'vue';
+
+const props = defineProps({
+    title: String, // Зміні тип даних пропсу
+    // img: ,
+    price: String,
+});
 
 </script>
 
@@ -12,8 +19,8 @@
             </ul>
         </div>
         <div class="product__item__text">
-            <h6><a href="#">Crab Pool vue</a></h6>
-            <h5>$30.00</h5>
+            <h6><a href="#">{{ title }}</a></h6>
+            <h5>{{ price }}</h5>
         </div>
     </div>
 </template>

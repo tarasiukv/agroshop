@@ -14,9 +14,9 @@ export default defineConfig({
             refresh: true,
         }),
     ],
-    // resolve: {
-    //     alias: {
-    //         'img': path.resolve(__dirname, 'public/assets/img'),
-    //     }
-    // }
+    resolve: {
+        alias: {
+            '@img': path.resolve(__dirname, 'public/assets/img'),
+        }
+    }
 });

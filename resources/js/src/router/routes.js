@@ -1,5 +1,5 @@
 import HomeComponent from "../component/pages/HomeComponent.vue";
-import ShopComponent from "../component/pages/ShopComponent.vue";
+import ShopComponent from "../component/pages/shop/ShopComponent.vue";
 import ContactComponent from "../component/pages/ContactComponent.vue";
 import CartComponent from "../component/pages/CartComponent.vue";
 import AdminComponent from "../component/adminComponent/AdminComponent.vue";
@@ -7,6 +7,7 @@ import AddCategoryComponent from "../component/adminComponent/add/AddCategoryCom
 import EditCategoryComponent from "../component/adminComponent/edit/EditCategoryComponent.vue";
 import AddProductComponent from "../component/adminComponent/add/AddProductComponent.vue";
 import EditProductComponent from "../component/adminComponent/edit/EditProductComponent.vue";
+import ProductDetailComponent from "../component/pages/shop/ProductDetailComponent.vue";
 
 const routes = [
     {
@@ -24,6 +25,10 @@ const routes = [
     {
         path: '/cart',
         component: CartComponent
+    },
+    {
+        path: '/shop/:id',
+        component: ProductDetailComponent
     },
     {
         path: '/admin',

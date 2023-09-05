@@ -24,7 +24,7 @@ class BasketProductsRequest extends FormRequest
         return [
             'basket_products_code' => 'nullable',
             'status' => 'nullable',
-            'quantity' => 'number|nullable',
+            'quantity' => 'nullable',
             'user_id' => 'nullable',
             'product_id' => 'nullable',
         ];

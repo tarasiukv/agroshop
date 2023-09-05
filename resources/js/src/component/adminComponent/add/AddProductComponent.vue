@@ -1,5 +1,23 @@
 <script setup>
+import axios from 'axios';
+import {onMounted, ref} from "vue";
 
+const selectedProduct = ref();
+const products = ref([]);
+const loadProducts = async () => {
+    try{
+        const { data } = await axios.get('/api/products');
+        products.value = data.data;
+        console.log(data);
+    }
+    catch (e) {
+        console.log(e)
+    }
+};
+
+onMounted(() => {
+    loadProducts();
+});
 </script>
 
 <style scoped>
@@ -43,24 +61,11 @@
             <input type="text" class="form-control" placeholder="Title of product">
         </div>
         <label>Select category</label>
-        <select multiple class="form-control">
-            <option>category 1</option>
-            <option>category 2</option>
-            <option>category 3</option>
-            <option>category 4</option>
-            <option>category 5</option>
-            <option>category 6</option>
-            <option>category 7</option>
-        </select>
-        <label>Select sub-category</label>
-        <select multiple class="form-control">
-            <option>sub-category 1</option>
-            <option>sub-category 2</option>
-            <option>sub-category 3</option>
-            <option>sub-category 4</option>
-            <option>sub-category 5</option>
-            <option>sub-category 6</option>
-            <option>sub-category 7</option>
+        <select
+            class="form-control"
+            v-model="selectedCategory"
+        >
+            <option v-for="category in categories" :key="category.id">{{ category.title }}</option>
         </select>
         <div class="form-group">
             <label>Description</label>

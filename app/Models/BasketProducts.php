@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class BasketProducts extends Model
 {
+    use HasFactory;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -20,5 +22,19 @@ class BasketProducts extends Model
         'product_id',
     ];
 
-    use HasFactory;
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function products()
+    {
+        return $this->hasMany(Product::class, 'product_id');
+    }
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }
