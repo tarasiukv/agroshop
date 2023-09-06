@@ -25,7 +25,7 @@ class ProductRequest extends FormRequest
             'title' => 'nullable',
             'description' => 'nullable',
             'price' => 'nullable',
-            'status' => 'nullable',
+//            'status' => 'nullable',
             'category_id' => 'nullable',
         ];
     }

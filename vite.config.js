@@ -17,6 +17,8 @@ export default defineConfig({
     resolve: {
         alias: {
             '@img': path.resolve(__dirname, 'public/assets/img'),
+            '@composable': path.resolve(__dirname, 'resources/js/composables'),
+            '@component': path.resolve(__dirname, 'resources/js/src/component'),
         }
     }
 });

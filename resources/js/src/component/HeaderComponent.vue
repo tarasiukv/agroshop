@@ -11,20 +11,20 @@ const links = [
     {
         title: "Shop",
         href: '/shop',
-        subLinks: [
-            {
-                title: "Seed",
-                href: '/seed',
-            },
-            {
-                title: 'Means of protection',
-                href: '/meansOfProtection',
-            },
-            {
-                title: 'Fertilizers and soils',
-                href: '/fertilizersAndSoils'
-            }
-        ]
+        // subLinks: [
+        //     {
+        //         title: "Seed",
+        //         href: '/seed',
+        //     },
+        //     {
+        //         title: 'Means of protection',
+        //         href: '/meansOfProtection',
+        //     },
+        //     {
+        //         title: 'Fertilizers and soils',
+        //         href: '/fertilizersAndSoils'
+        //     }
+        // ]
     },
     {
         title: "Contact",

@@ -23,7 +23,7 @@ class CategoryRequest extends FormRequest
     {
         return [
             'title' => 'nullable',
-//            'category_id' => 'nullable',
+            'parent_category_id' => 'nullable',
         ];
     }
 }

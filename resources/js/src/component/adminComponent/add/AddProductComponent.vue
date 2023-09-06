@@ -1,52 +1,16 @@
 <script setup>
-import axios from 'axios';
 import {onMounted, ref} from "vue";
-import {useRouter, useRoute} from "vue-router";
+import {useRouter} from "vue-router";
+import useProducts from "@composable/product.js";
+import useCategories from "@composable/category.js";
 
 const router = useRouter();
 
-const form = ref({
-    title: '',
-    description: '',
-    category: '',
-    // img: '',
-});
-
-const store = async () => {
-    try {
-        await axios.post('/api/products', form, {
-            headers: {
-                "Content-type": "application/json"
-            }
-        })
-            .then(res => {
-                if (res.data.status) {
-                    router.push('/shop/' + res.data.post.id)
-                }
-
-            });
-        // Ви можете додати обробку успішного збереження даних тут, наприклад, редірект або повідомлення про успішне збереження.
-    } catch (error) {
-        // Обробка помилок, якщо збереження даних не вдалося.
-        console.error('Помилка при збереженні даних:', error);
-    }
-};
-
-const selectedCategory = ref();
-const categories = ref([]);
-const loadCategories = async () => {
-    try{
-        const { data } = await axios.get('/api/categories');
-        categories.value = data.data;
-        console.log(data);
-    }
-    catch (e) {
-        console.log(e)
-    }
-};
+const { product, storeProduct } = useProducts();
+const {category, categories, getCategories} = useCategories();
 
 onMounted(() => {
-    loadCategories();
+    getCategories();
 });
 </script>
 
@@ -92,15 +56,21 @@ onMounted(() => {
                 type="text"
                 class="form-control"
                 placeholder="Title of product"
-                v-model="form.title"
+                v-model="product.title"
             >
         </div>
         <label>Select category</label>
         <select
             class="form-control"
-            v-model="form.category"
+            v-model="product.category_id"
         >
-            <option v-for="category in categories" :key="category.id">{{ category.title }}</option>
+            <option
+                v-for="category_item in categories"
+                :key="category_item.id"
+                :value="category_item.id"
+            >
+                {{ category_item.title }}
+            </option>
         </select>
         <div class="form-group">
             <label>Description</label>
@@ -108,26 +78,41 @@ onMounted(() => {
                 class="form-control"
                 rows="3"
                 placeholder="Description"
-                v-model="form.description"
+                v-model="product.description"
             ></textarea>
         </div>
         <div class="form-group">
-            <label for="exampleInputFile">Photo</label>
-            <div class="input-group">
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="exampleInputFile">
-                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                </div>
-                <div class="input-group-append">
-                    <span class="input-group-text">Upload</span>
-                </div>
+            <div class="input-group-prepend">
+                <label>Price</label>
             </div>
+            <input
+                type="text"
+                class="form-control"
+                v-model="product.price"
+            >
         </div>
+<!--        <div class="form-group">-->
+<!--            <label for="exampleInputFile">Photo</label>-->
+<!--            <div class="input-group">-->
+<!--                <div class="custom-file">-->
+<!--                    <input-->
+<!--                        type="file"-->
+<!--                        class="custom-file-input"-->
+<!--                        id="exampleInputFile"-->
+<!--                        v-on:change="form.img"-->
+<!--                    >-->
+<!--                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>-->
+<!--                </div>-->
+<!--                <div class="input-group-append">-->
+<!--                    <span class="input-group-text">Upload</span>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="card-footer">
             <button
                 type="submit"
                 class="btn btn-primary"
-                @click.prevent="store"
+                @click.prevent="storeProduct"
             >Submit</button>
         </div>
     </form>
