@@ -1,5 +1,13 @@
+/*  ---------------------------------------------------
+    Template Name: Agroshop
+    Description:  Agroshop
+    Author: Viktor
+    Version: 1.0
+    Created: Viktor
+---------------------------------------------------------  */
+
 'use strict';
-import "./jquery.slicknav.js"
+
 (function ($) {
 
     /*------------------
@@ -86,10 +94,10 @@ import "./jquery.slicknav.js"
         }
     });
 
-    // $('.hero__categories__all').on('click', function(){
-    //     console.log('435654643643vgerhtye5h6h43643')
-    //     $('.hero__categories ul').slideToggle(400);
-    // });
+
+    $('.hero__categories__all').on('click', function(){
+        $('.hero__categories ul').slideToggle(400);
+    });
 
     /*--------------------------
         Latest Product Slider

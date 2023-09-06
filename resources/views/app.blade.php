@@ -16,5 +16,7 @@
     <body>
         <div id="app"></div>
         @vite('resources/js/app.js')
+        <script type="module" src="{{ asset('assets/js/main.js') }}"></script>
+
     </body>
 </html>
