@@ -15,7 +15,7 @@ import "../../public/assets/css/style.css";
 // Js Plugins
 import "../../public/assets/js/jquery-3.3.1.min.js";
 import "../../public/assets/js/bootstrap.min.js";
-import "../../public/assets/js/jquery.nice-select.min.js";
+// import "../../public/assets/js/jquery.nice-select.min.js";
 import "../../public/assets/js/jquery-ui.min.js";
 import "../../public/assets/js/jquery.slicknav.js";
 import "../../public/assets/js/mixitup.min.js";

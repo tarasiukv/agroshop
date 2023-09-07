@@ -53,14 +53,6 @@ const increment = () => {
 }
 
 onMounted(() => {
-    document.querySelector('.hero__categories__all').addEventListener('click', function () {
-        var categoriesList = document.querySelector('.hero__categories ul');
-        if (categoriesList.style.display === 'none' || categoriesList.style.display === '') {
-            categoriesList.style.display = 'block';
-        } else {
-            categoriesList.style.display = 'none';
-        }
-    });
     getCategories();
 })
 </script>
@@ -95,7 +87,7 @@ onMounted(() => {
                 </ul>
             </div>
             <div class="header__top__right__auth">
-                <a href="#"><i class="fa fa-user"></i> Login</a>
+                <a href="/login"><i class="fa fa-user"></i> Login</a>
             </div>
         </div>
         <nav class="humberger__menu__nav mobile-menu">
@@ -155,7 +147,7 @@ onMounted(() => {
                                 </ul>
                             </div>
                             <div class="header__top__right__auth">
-                                <a href="#"><i class="fa fa-user"></i> Login</a>
+                                <a href="/login"><i class="fa fa-user"></i> Login</a>
                             </div>
                         </div>
                     </div>
@@ -211,7 +203,7 @@ onMounted(() => {
                             <i class="fa fa-bars"></i>
                             <span>All departments</span>
                         </div>
-                        <ul>
+                        <ul style="display: none">
                             <li
                                 v-for="category_item in categories"
                                 :key="category_item.id"

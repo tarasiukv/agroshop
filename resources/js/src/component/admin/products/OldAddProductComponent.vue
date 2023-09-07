@@ -32,10 +32,6 @@ onMounted(() => {
     display: block;
 }
 
-.form-group {
-    float: none;
-}
-
 .name__page {
     margin-bottom: 35px;
 }
@@ -54,49 +50,6 @@ onMounted(() => {
     </div>
     <h4 class="name__page">Add product</h4>
     <form>
-        <div class="form-group">
-            <label>Title of product</label>
-            <input
-                type="text"
-                class="form-control"
-                placeholder="Title of product"
-                v-model="product.title"
-            >
-        </div>
-        <div class="form-group">
-            <label>Select category</label>
-            <select
-                class="form-control"
-                v-model="product.category_id"
-            >
-                <option
-                    v-for="category_item in categories"
-                    :key="category_item.id"
-                    :value="category_item.id"
-                >
-                    {{ category_item.title }}
-                </option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label>Description</label>
-            <textarea
-                class="form-control"
-                rows="3"
-                placeholder="Description"
-                v-model="product.description"
-            ></textarea>
-        </div>
-        <div class="form-group">
-            <div class="input-group-prepend">
-                <label>Price</label>
-            </div>
-            <input
-                type="text"
-                class="form-control"
-                v-model="product.price"
-            >
-        </div>
         <!--        <div class="form-group">-->
         <!--            <label for="exampleInputFile">Photo</label>-->
         <!--            <div class="input-group">-->
@@ -117,7 +70,7 @@ onMounted(() => {
         <div class="col-md-6">
             <div class="card card-primary">
                 <div class="card-header">
-                    <h3 class="card-title">General</h3>
+                    <h3 class="card-title">Add Product</h3>
 
                     <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -125,23 +78,20 @@ onMounted(() => {
                         </button>
                     </div>
                 </div>
+
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="inputName">Project Name</label>
-                        <input type="text" id="inputName" class="form-control" value="AdminLTE">
-                    </div>
-                    <div class="form-group">
-                        <label for="inputDescription">Project Description</label>
-                        <textarea
-                            id="inputDescription"
+                        <label for="inputName">Title</label>
+                        <input
+                            type="text"
+                            id="inputName"
                             class="form-control"
-                            rows="4"
-                            placeholder="Description"
-                            v-model="product.description"
-                        ></textarea>
+                            placeholder="Title of product"
+                            v-model="product.title"
+                        >
                     </div>
                     <div class="form-group">
-                        <label for="inputStatus">Status</label>
+                        <label for="inputStatus">Category</label>
                         <select
                             id="inputStatus"
                             class="form-control custom-select"
@@ -161,6 +111,16 @@ onMounted(() => {
                         </select>
                     </div>
                     <div class="form-group">
+                        <label for="inputDescription">Description</label>
+                        <textarea
+                            id="inputDescription"
+                            class="form-control"
+                            rows="4"
+                            placeholder="Description"
+                            v-model="product.description"
+                        ></textarea>
+                    </div>
+                    <div class="form-group">
                         <label for="inputClientCompany">Price</label>
                         <input
                             type="text"
@@ -170,18 +130,21 @@ onMounted(() => {
                         >
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-12">
+                        <a href="#" class="cancel-btn">Cancel</a>
+                        <button
+                            type="submit"
+                            @click.prevent="storeProduct"
+                            class="site-btn"
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </div>
                 <!-- /.card-body -->
             </div>
             <!-- /.card -->
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <a href="#" class="btn btn-secondary">Cancel</a>
-                <input
-                    type="submit"
-                    @click.prevent="storeProduct"
-                    class="btn btn-success float-right">
-            </div>
         </div>
     </form>
 </template>

@@ -1,13 +1,14 @@
-import HomeComponent from "../component/pages/HomeComponent.vue";
-import ShopComponent from "../component/pages/shop/ShopComponent.vue";
-import ContactComponent from "../component/pages/ContactComponent.vue";
-import CartComponent from "../component/pages/CartComponent.vue";
-import AdminComponent from "../component/adminComponent/AdminComponent.vue";
-import AddCategoryComponent from "../component/adminComponent/add/AddCategoryComponent.vue";
-import EditCategoryComponent from "../component/adminComponent/edit/EditCategoryComponent.vue";
-import AddProductComponent from "../component/adminComponent/add/AddProductComponent.vue";
-import EditProductComponent from "../component/adminComponent/edit/EditProductComponent.vue";
-import ProductDetailComponent from "../component/pages/shop/ProductDetailComponent.vue";
+import HomeComponent from "@component/pages/HomeComponent.vue";
+import ShopComponent from "@component/pages/shop/ShopComponent.vue";
+import ContactComponent from "@component/pages/ContactComponent.vue";
+import CartComponent from "@component/pages/CartComponent.vue";
+import AdminComponent from "@component/admin/AdminComponent.vue";
+import AddCategoryComponent from "@component/admin/categories/AddCategoryComponent.vue";
+import EditCategoryComponent from "@component/admin/categories/EditCategoryComponent.vue";
+import AddProductComponent from "@component/admin/products/AddProductComponent.vue";
+import EditProductComponent from "@component/admin/products/EditProductComponent.vue";
+import ProductDetailComponent from "@component/pages/shop/ProductDetailComponent.vue";
+import LogInComponent from "@component/login/LogInComponent.vue";
 
 const routes = [
     {
@@ -31,15 +32,19 @@ const routes = [
         component: ProductDetailComponent
     },
     {
+        path: '/login',
+        component: LogInComponent
+    },
+    {
         path: '/admin',
         component: AdminComponent
     },
     {
-        path: '/admin/add-categories',
+        path: '/admin/add-category',
         component: AddCategoryComponent
     },
     {
-        path: '/admin/edit-categories',
+        path: '/admin/edit-category',
         component: EditCategoryComponent
     },
     {

@@ -18,7 +18,9 @@ export default defineComponent({
 
 <template>
     <LoaderComponent />
-    <HeaderComponent/>
+    <HeaderComponent
+
+    />
     <main class="main">
         <router-view/>
     </main>

@@ -4,6 +4,7 @@ import {useRouter} from "vue-router";
 import useProducts from "@composable/product.js";
 import SidebarComponent from "@component/features/SidebarComponent.vue";
 import ShopProductComponent from "@component/pages/shop/ShopProductComponent.vue";
+import BreadcrumbComponent from "./BreadcrumbComponent.vue"
 
 const router = useRouter();
 
@@ -15,24 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <!-- Breadcrumb Section Begin -->
-    <section class="breadcrumb-section set-bg" data-setbg="@img/breadcrumb.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <div class="breadcrumb__text">
-                        <h2>Agroshop Shop</h2>
-                        <div class="breadcrumb__option">
-                            <a href="/">Home</a>
-                            <span>Shop</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Breadcrumb Section End -->
-
+    <BreadcrumbComponent />
     <!-- Product Section Begin -->
     <section class="product spad">
         <div class="container">
