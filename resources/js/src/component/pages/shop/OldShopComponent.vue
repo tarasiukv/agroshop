@@ -4,7 +4,7 @@ import {useRouter} from "vue-router";
 import useProducts from "@composable/product.js";
 import SidebarComponent from "@component/features/SidebarComponent.vue";
 import ShopProductComponent from "@component/pages/shop/ShopProductComponent.vue";
-import BreadcrumbComponent from "./BreadcrumbComponent.vue"
+import BreadcrumbComponent from "../../features/BreadcrumbComponent.vue"
 
 const router = useRouter();
 
@@ -16,7 +16,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <BreadcrumbComponent />
+    <BreadcrumbComponent/>
     <!-- Product Section Begin -->
     <section class="product spad">
         <div class="container">
@@ -49,17 +49,13 @@ onMounted(async () => {
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-6">
-                            <ShopProductComponent
-                                v-for="product in products"
-                                :key="product.id"
-                                :id="product.id"
-                                :title="product.title"
-                                :price="product.price"
-                            />
-                        </div>
-                    </div>
+                    <ShopProductComponent
+                        v-for="product in products"
+                        :key="product.id"
+                        :id="product.id"
+                        :title="product.title"
+                        :price="product.price"
+                    />
                     <div class="product__pagination">
                         <a href="#">1</a>
                         <a href="#">2</a>

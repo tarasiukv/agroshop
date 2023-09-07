@@ -57,17 +57,12 @@ onMounted(() => {
 })
 </script>
 
-<style scoped>
-
-</style>
-
-
 <template>
     <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="/"><img src="@img/logo.png" alt=""></a>
+            <a href="/public"><img src="@img/logo.png" alt=""></a>
         </div>
         <div class="humberger__menu__cart">
             <ul>
@@ -125,7 +120,7 @@ onMounted(() => {
                     <div class="col-lg-6 col-md-6">
                         <div class="header__top__left">
                             <ul>
-                                <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                                <li><i class="fa fa-envelope"></i> hello@mail.com</li>
                                 <li>Free Shipping for all Order of $99</li>
                             </ul>
                         </div>
@@ -138,16 +133,19 @@ onMounted(() => {
                                 <a href="#"><i class="fa fa-telegram"></i></a>
                             </div>
                             <div class="header__top__right__language">
-                                <img src="@img/language.png" alt="">
+                                <img src="img/language.png" alt="">
                                 <div>English</div>
-                                <span class="arrow_carrot-down"></span>
                                 <ul>
                                     <li><a href="#">Ukraine</a></li>
                                     <li><a href="#">English</a></li>
                                 </ul>
                             </div>
-                            <div class="header__top__right__auth">
+                            <div class="header__top__right__language">
                                 <a href="/login"><i class="fa fa-user"></i> Login</a>
+                                    <ul>
+                                        <li><a href="/login">Login</a></li>
+                                        <li><a href="/registration">Registation</a></li>
+                                    </ul>
                             </div>
                         </div>
                     </div>
@@ -193,51 +191,10 @@ onMounted(() => {
             </div>
         </div>
     </header>
-    <!-- Header Section End -->
-    <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3">
-                    <div class="hero__categories">
-                        <div class="hero__categories__all">
-                            <i class="fa fa-bars"></i>
-                            <span>All departments</span>
-                        </div>
-                        <ul style="display: none">
-                            <li
-                                v-for="category_item in categories"
-                                :key="category_item.id"
-                            >
-                                <a href="#">{{ category_item.title }}</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="hero__search">
-                        <div class="hero__search__form">
-                            <form action="#">
-                                <div class="hero__search__categories">
-                                    All Categories
-                                    <span class="arrow_carrot-down"></span>
-                                </div>
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
-                            </form>
-                        </div>
-                        <div class="hero__search__phone">
-                            <div class="hero__search__phone__icon">
-                                <i class="fa fa-phone"></i>
-                            </div>
-                            <div class="hero__search__phone__text">
-                                <h5>+380 (00) 000 0000</h5>
-                                <span>support 24/7 time</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 </template>
 
+<style scoped>
+a {
+    color: #000000;
+}
+</style>

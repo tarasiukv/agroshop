@@ -2,7 +2,7 @@
 import axios from 'axios';
 import {ref, onMounted} from 'vue';
 import {useRoute} from 'vue-router';
-import BreadcrembComponent from "./BreadcrumbComponent.vue";
+import BreadcrembComponent from "../../features/BreadcrumbComponent.vue";
 
 const route = useRoute();
 const productId = ref(null);

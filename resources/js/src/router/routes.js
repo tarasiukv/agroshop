@@ -8,7 +8,8 @@ import EditCategoryComponent from "@component/admin/categories/EditCategoryCompo
 import AddProductComponent from "@component/admin/products/AddProductComponent.vue";
 import EditProductComponent from "@component/admin/products/EditProductComponent.vue";
 import ProductDetailComponent from "@component/pages/shop/ProductDetailComponent.vue";
-import LogInComponent from "@component/login/LogInComponent.vue";
+import LogInComponent from "@component/users/LogInComponent.vue";
+import RegistrationComponent from "@component/users/RegistrationComponent.vue";
 
 const routes = [
     {
@@ -34,6 +35,10 @@ const routes = [
     {
         path: '/login',
         component: LogInComponent
+    },
+    {
+        path: '/registration',
+        component: RegistrationComponent
     },
     {
         path: '/admin',

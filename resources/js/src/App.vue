@@ -1,7 +1,7 @@
 <script>
 import {defineComponent} from "vue";
-import HeaderComponent from "./component/HeaderComponent.vue";
-import FooterComponent from "./component/FooterComponent.vue";
+import HeaderComponent from "@component/features/HeaderComponent.vue";
+import FooterComponent from "@component/features/FooterComponent.vue";
 import LoaderComponent from "./component/features/LoaderComponent.vue";
 
 export default defineComponent({
