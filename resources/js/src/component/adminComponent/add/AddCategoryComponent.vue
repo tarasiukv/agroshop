@@ -42,27 +42,20 @@ onMounted(async () => {
                 v-model="category.title"
             >
         </div>
-        <label>Select parent category</label>
-        <select
-            class="form-control"
-            v-model="category.parent_category_id"
-        >
-            <option
-                v-for="category_item in categories"
-                :key="category_item.id"
-                :value="category_item.id"
-            >
-                {{ category_item.title }}
-            </option>
-        </select>
         <div class="form-group">
-            <label>Name of sub-category</label>
-            <input
-                type="text"
+            <label>Select parent category</label>
+            <select
                 class="form-control"
-                placeholder="Name of sub-category"
-
+                v-model="category.parent_category_id"
             >
+                <option
+                    v-for="category_item in categories"
+                    :key="category_item.id"
+                    :value="category_item.id"
+                >
+                    {{ category_item.title }}
+                </option>
+            </select>
         </div>
         <div class="card-footer">
             <button

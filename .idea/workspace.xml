@@ -4,29 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ea6d0ef-d4f6-4bbc-9f00-76f15a6269e6" name="Changes" comment="Add Product page and axios">
-      <change afterPath="$PROJECT_DIR$/resources/js/composables/category.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/composables/product.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/src/component/features/SidebarComponent.vue" afterDir="false" />
+    <list default="true" id="2ea6d0ef-d4f6-4bbc-9f00-76f15a6269e6" name="Changes" comment="Add:&#10;main.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CategoryRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ProductRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/CategoryResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/CategoryResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ProductResource.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_09_02_140444_create_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_09_02_140444_create_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2023_09_02_151757_create_products_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2023_09_02_151757_create_products_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ogani-master/blog-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/ogani-master/blog-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ogani-master/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/ogani-master/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ogani-master/checkout.html" beforeDir="false" afterPath="$PROJECT_DIR$/ogani-master/checkout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ogani-master/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/ogani-master/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ogani-master/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/ogani-master/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ogani-master/shop-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/ogani-master/shop-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ogani-master/shop-grid.html" beforeDir="false" afterPath="$PROJECT_DIR$/ogani-master/shop-grid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ogani-master/shoping-cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/ogani-master/shoping-cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/FooterComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/FooterComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/component/HeaderComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/HeaderComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddCategoryComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddCategoryComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddProductComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddProductComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/src/component/adminComponent/edit/EditProductComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/adminComponent/edit/EditProductComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/CartComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/CartComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/ContactComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/ContactComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/HomeComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/HomeComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/shop/BreadcrembComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/shop/BreadcrembComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ProductDetailComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ProductDetailComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ShopComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ShopComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ShopProductComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/src/component/pages/shop/ShopProductComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/app.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,29 +182,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/var/www/html/agroshop.local.com/resources/js/composables",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie",
-    "ts.external.directory.path": "/snap/phpstorm/351/plugins/javascript-impl/jsLanguageServicesImpl/external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/var/www/html/agroshop.local.com/resources/js/composables&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/phpstorm/351/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "vue.recent.templates": [
-      "Vue Composition API Component",
-      "Vue Options API Component"
+  &quot;keyToStringList&quot;: {
+    &quot;vue.recent.templates&quot;: [
+      &quot;Vue Composition API Component&quot;,
+      &quot;Vue Options API Component&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/js/composables" />
@@ -246,7 +245,8 @@
       <workItem from="1693816010837" duration="6000" />
       <workItem from="1693824091398" duration="13000" />
       <workItem from="1693908794128" duration="21406000" />
-      <workItem from="1693985575364" duration="21114000" />
+      <workItem from="1693985575364" duration="21448000" />
+      <workItem from="1694022595687" duration="8964000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <option name="closed" value="true" />
@@ -288,7 +288,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693931168576</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add:&#10;alis;&#10;composables folder with js files;&#10;update">
+      <option name="closed" value="true" />
+      <created>1694011289091</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1694011289091</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Add:&#10;main.js">
+      <option name="closed" value="true" />
+      <created>1694024887999</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694024887999</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +328,32 @@
     <MESSAGE value="Add MVC" />
     <MESSAGE value="Edit MVC" />
     <MESSAGE value="Add Product page and axios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Product page and axios" />
+    <MESSAGE value="Add:&#10;alis;&#10;composables folder with js files;&#10;update" />
+    <MESSAGE value="Add:&#10;main.js" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add:&#10;main.js" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddProductComponent.vue</url>
+          <line>24</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddProductComponent.vue</url>
+          <line>59</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/src/component/adminComponent/add/AddProductComponent.vue</url>
+          <line>23</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

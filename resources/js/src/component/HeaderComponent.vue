@@ -2,6 +2,13 @@
 import {defineComponent, computed, onMounted} from "vue";
 import {useStore} from "vuex";
 
+import {useRouter} from "vue-router";
+import useCategories from "@composable/category.js";
+
+const router = useRouter();
+
+const {category, categories, storeCategory, getCategories} = useCategories();
+
 
 const links = [
     {
@@ -47,7 +54,6 @@ const increment = () => {
 
 onMounted(() => {
     document.querySelector('.hero__categories__all').addEventListener('click', function () {
-        console.log('435654643643vgerhtye5h6h43643');
         var categoriesList = document.querySelector('.hero__categories ul');
         if (categoriesList.style.display === 'none' || categoriesList.style.display === '') {
             categoriesList.style.display = 'block';
@@ -55,6 +61,7 @@ onMounted(() => {
             categoriesList.style.display = 'none';
         }
     });
+    getCategories();
 })
 </script>
 
@@ -68,7 +75,7 @@ onMounted(() => {
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
         <div class="humberger__menu__logo">
-            <a href="/"><img src="img/logo.png" alt=""></a>
+            <a href="/"><img src="@img/logo.png" alt=""></a>
         </div>
         <div class="humberger__menu__cart">
             <ul>
@@ -79,7 +86,7 @@ onMounted(() => {
         </div>
         <div class="humberger__menu__widget">
             <div class="header__top__right__language">
-                <img src="img/language.png" alt="">
+                <img src="@img/language.png" alt="">
                 <div>English</div>
                 <span class="arrow_carrot-down"></span>
                 <ul>
@@ -139,7 +146,7 @@ onMounted(() => {
                                 <a href="#"><i class="fa fa-telegram"></i></a>
                             </div>
                             <div class="header__top__right__language">
-                                <img src="img/language.png" alt="">
+                                <img src="@img/language.png" alt="">
                                 <div>English</div>
                                 <span class="arrow_carrot-down"></span>
                                 <ul>
@@ -159,7 +166,7 @@ onMounted(() => {
             <div class="row">
                 <div class="col-lg-3">
                     <div class="header__logo">
-                        <a href="./index.html"><img src="img/logo.png" alt=""></a>
+                        <a href="./index.html"><img src="@img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -205,8 +212,11 @@ onMounted(() => {
                             <span>All departments</span>
                         </div>
                         <ul>
-                            <li v-for="subLink in links.subLinks" :key="subLink.href">
-                                <router-link :to="subLink.href">{{ subLink.title }}</router-link>
+                            <li
+                                v-for="category_item in categories"
+                                :key="category_item.id"
+                            >
+                                <a href="#">{{ category_item.title }}</a>
                             </li>
                         </ul>
                     </div>

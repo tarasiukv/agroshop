@@ -3,6 +3,7 @@ import { defineProps } from "vue";
 
 // Отримуємо доступ до props
 const props = defineProps({
+    id: Number,
     title: String,
     price: String,
 });
@@ -19,7 +20,7 @@ const props = defineProps({
             </ul>
         </div>
         <div class="product__item__text">
-            <h6><a href="#">{{ props.title }}</a></h6>
+            <h6><a :href="'/shop/' + props.id">{{ props.title }}</a></h6>
             <h5>{{ props.price }}</h5>
         </div>
     </div>

@@ -70,6 +70,7 @@ onMounted(async () => {
                             <ShopProductComponent
                                 v-for="product in products"
                                 :key="product.id"
+                                :id="product.id"
                                 :title="product.title"
                                 :price="product.price"
                             />
