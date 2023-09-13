@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\v1\AuthController;
 use App\Http\Controllers\Api\v1\CategoryController;
+use App\Http\Controllers\Api\v1\ImagesController;
 use App\Http\Controllers\Api\v1\ProductsController;
 use App\Http\Controllers\Api\v1\UsersController;
 use Illuminate\Support\Facades\Route;

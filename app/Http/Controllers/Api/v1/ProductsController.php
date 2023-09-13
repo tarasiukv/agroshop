@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\ProductRequest;
 use App\Http\Resources\ProductResource;
 use App\Models\Product;
+use App\Services\FileService;
+use Illuminate\Support\Facades\DB;
+use PharIo\Version\Exception;
 use Symfony\Component\HttpFoundation\Response;
 use Validator;
 
@@ -24,7 +27,24 @@ class ProductsController extends Controller
      */
     public function store(ProductRequest $request)
     {
-        return Product::create($request->validated());
+        $data = $request->validated();
+        $file = $request->img;
+
+        DB::beginTransaction();
+        try {
+            $product = Product::create([
+                'title' => $data['title'],
+                'description' => $data['description'],
+                'price' => $data['price'],
+                'category_id' => $data['category_id'],
+            ]);
+            $file_path = FileService::store($file, $product);
+            $product->file_path = $file_path;
+            $product->save();
+            DB::commit();
+        } catch (Exception $e) {
+            DB::rollBack();
+        }
     }
 
     /**

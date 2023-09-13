@@ -22,6 +22,7 @@ class User extends Authenticatable implements JWTSubject
         'name',
         'email',
         'password',
+        'slug',
     ];
 
     /**
@@ -44,6 +45,12 @@ class User extends Authenticatable implements JWTSubject
         'password' => 'hashed',
     ];
 
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+
+
     public function getJWTIdentifier()
     {
         // TODO: Implement getJWTIdentifier() method.
@@ -52,7 +59,6 @@ class User extends Authenticatable implements JWTSubject
 
     public function getJWTCustomClaims()
     {
-        // TODO: Implement getJWTCustomClaims() method.
         return [];
     }
 }

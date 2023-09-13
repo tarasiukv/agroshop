@@ -5,7 +5,6 @@ import useCategories from "@composable/category.js";
 import SidebarAdminComponent from "@component/admin/SidebarAdminComponent.vue";
 
 const router = useRouter();
-
 const {category, categories, storeCategory, getCategories} = useCategories();
 
 onMounted(async () => {

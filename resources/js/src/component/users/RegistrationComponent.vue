@@ -8,9 +8,7 @@ const router = useRouter();
 const {user, storeUser} = useUsers();
 
 onMounted(async () => {
-    getCategories();
 })
-
 </script>
 
 <template>
@@ -51,7 +49,7 @@ onMounted(async () => {
                                     type="password"
                                     placeholder="Confirm your password"
                                     class="form-control checkout__input__add"
-                                    v-model="user.password_confirm"
+                                    v-model="user.password_confirmation"
                                 >
                             </div>
                             <div class="row">

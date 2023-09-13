@@ -23,9 +23,9 @@ class UserRequest extends FormRequest
     {
         return [
             'name' => 'nullable',
-            'email' => 'nullable',
-            'password' => 'nullable|confirmed',
-            'password_confirm' => 'nullable',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|confirmed',
+            'password_confirmation' => 'required',
         ];
     }
 }

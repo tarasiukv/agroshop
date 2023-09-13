@@ -103,7 +103,7 @@ export default function useUsers() {
                 }
 
                 const response = await axios.post('/api/users', user.value, request_config)
-
+                console.log(user.value)
                 // toasterCustom.toastSuccess('New user added successfully');
                 // await router.push({name: 'a_users_edit_route', params: {user_id: response.data.data.id}});
                 // setTimeout(() => {
@@ -161,6 +161,32 @@ export default function useUsers() {
         return false;
     }
 
+    const loginUser = async () => {
+        // let confirm_response = await swAlertsCustom.alertConfirm('Saving user', 'Save user?', 'Save', 'Cancel');
+
+        // if (confirm_response) {
+        console.log('!!!!!!!!  user.value')
+        console.log(user.value)
+        try {
+            let request_config = {
+            }
+
+            const response = await axios.post('/api/auth/login', user.value, request_config)
+                .then(response => {
+                    localStorage.setItem('access_token', response.data.access_token)
+                })
+            // toasterCustom.toastSuccess('New user added successfully');
+            // await router.push({name: 'a_users_edit_route', params: {user_id: response.data.data.id}});
+            // setTimeout(() => {
+            //     location.reload()
+            // }, 2000)
+        } catch (e) {console.log(e) }
+        // }
+
+        return false;
+    }
+
+
     return {
         getUser,
         getUsers,
@@ -170,6 +196,7 @@ export default function useUsers() {
         nextUserPage,
         prevUserPage,
         nextUserPageForScroll,
+        loginUser,
         users,
         user,
         incoming_user,

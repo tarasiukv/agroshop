@@ -77,8 +77,7 @@ export default function useProducts() {
      */
     const getProduct = async (id) => {
         try {
-            let request_config = {
-            }
+            let request_config = {}
             const response = await axios.get('/api/products/' + id, request_config)
 
             product.value = response.data.data
@@ -89,31 +88,26 @@ export default function useProducts() {
     }
 
     /**
-     * @param data
+     * @param formData
      * @returns {Promise<boolean>}
      */
-    const storeProduct = async () => {
-        // let confirm_response = await swAlertsCustom.alertConfirm('Saving product', 'Save product?', 'Save', 'Cancel');
+    const storeProduct = async (formData) => {
+        try {
+            console.log('formData')
+            console.log(formData)
+            const response = await axios.post('/api/products', formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            });
 
-        // if (confirm_response) {
-        console.log('!!!!!!!!  product.value')
-        console.log(product.value)
-            try {
-                let request_config = {
-                }
+            return response.data;
+        } catch (error) {
+            console.error(error);
+            throw error;
+        }
+    };
 
-                const response = await axios.post('/api/products', product.value, request_config)
-
-                // toasterCustom.toastSuccess('New product added successfully');
-                // await router.push({name: 'a_products_edit_route', params: {product_id: response.data.data.id}});
-                // setTimeout(() => {
-                //     location.reload()
-                // }, 2000)
-            } catch (e) {console.log(e) }
-        // }
-
-        return false;
-    }
 
     /**
      * @param id
@@ -123,16 +117,15 @@ export default function useProducts() {
 
         // let confirm_response = await swAlertsCustom.alertConfirm('Updating product', 'Save changes?', 'Save', 'Cancel');
         // if (confirm_response) {
-            try {
-                let request_config = {
-                }
+        try {
+            let request_config = {}
 
-                const response = await axios.patch('/api/products/' + id, product.value, request_config)
+            const response = await axios.patch('/api/products/' + id, product.value, request_config)
 
-                // toasterCustom.toastSuccess('Product updated successfully');
-            } catch (e) {
-                console.log(e)
-            }
+            // toasterCustom.toastSuccess('Product updated successfully');
+        } catch (e) {
+            console.log(e)
+        }
         // }
 
         return false;
@@ -146,16 +139,15 @@ export default function useProducts() {
         if (id !== undefined) {
             // let confirm_response = await swAlertsCustom.alertConfirm('Deleting product', 'Are you sure?', 'Delete', 'Cancel');
             // if (confirm_response) {
-                try {
-                    let request_config = {
-                    }
-                    const response = await axios.delete('/api/products/' + id, request_config)
+            try {
+                let request_config = {}
+                const response = await axios.delete('/api/products/' + id, request_config)
 
-                    // toasterCustom.toastSuccess('Product deleted');
-                } catch (e) {
-                    console.log(e)
-                }
+                // toasterCustom.toastSuccess('Product deleted');
+            } catch (e) {
+                console.log(e)
             }
+        }
         // }
 
         return false;

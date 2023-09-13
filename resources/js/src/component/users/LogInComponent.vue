@@ -1,5 +1,13 @@
 <script setup>
+import useUsers from "@composable/user.js";
+import {onMounted} from "vue";
+import {useRouter} from "vue-router";
 
+const router = useRouter();
+const {user, loginUser } = useUsers();
+
+onMounted(() => {
+})
 </script>
 
 <template>
@@ -12,14 +20,28 @@
                         <div class="col-lg-8 col-md-6">
                             <div class="checkout__input">
                                 <p>Login</p>
-                                <input type="email" placeholder="E-mail" class="form-control checkout__input__add">
+                                <input
+                                    type="email"
+                                    placeholder="E-mail"
+                                    class="form-control checkout__input__add"
+                                    v-model="user.email"
+                                >
                             </div>
                             <div class="checkout__input">
                                 <p>Password</p>
-                                <input type="password" placeholder="Password" class="form-control checkout__input__add">
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    class="form-control checkout__input__add"
+                                    v-model="user.password"
+                                >
                             </div>
                             <div class="checkout__input">
-                            <button type="submit" class="site-btn">LOG IN</button>
+                            <button
+                                type="submit"
+                                class="site-btn"
+                                @click.prevent="loginUser"
+                            >LOG IN</button>
                             </div>
                         </div>
                     </div>

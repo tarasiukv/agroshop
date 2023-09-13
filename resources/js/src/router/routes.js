@@ -7,7 +7,7 @@ import AddCategoryComponent from "@component/admin/categories/AddCategoryCompone
 import EditCategoryComponent from "@component/admin/categories/EditCategoryComponent.vue";
 import AddProductComponent from "@component/admin/products/AddProductComponent.vue";
 import EditProductComponent from "@component/admin/products/EditProductComponent.vue";
-import ProductDetailComponent from "@component/pages/shop/ProductDetailComponent.vue";
+import ProductDetailComponent from "@component/pages/ProductDetailComponent.vue";
 import LogInComponent from "@component/users/LogInComponent.vue";
 import RegistrationComponent from "@component/users/RegistrationComponent.vue";
 
@@ -60,8 +60,6 @@ const routes = [
         path: '/admin/edit-product',
         component: EditProductComponent
     },
-
-
 
 ];
 

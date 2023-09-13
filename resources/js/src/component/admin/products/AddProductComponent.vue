@@ -1,5 +1,5 @@
 <script setup>
-import {onMounted} from "vue";
+import { ref, onMounted} from "vue";
 import {useRouter} from "vue-router";
 import useProducts from "@composable/product.js";
 import useCategories from "@composable/category.js";
@@ -9,6 +9,29 @@ const router = useRouter();
 
 const {product, storeProduct} = useProducts();
 const {categories, getCategories} = useCategories();
+
+const file = ref('');
+
+const makeFormData = async () => {
+    const formData = new FormData();
+
+    formData.append('title', product.value.title);
+    formData.append('category_id', product.value.category_id);
+    formData.append('price', product.value.price);
+    formData.append('description', product.value.description);
+    formData.append('img', file.value);
+
+    return formData
+}
+
+const getImage = () => {
+    const fileInput = event.target
+    file.value = fileInput.files[0]
+}
+const submitForm = async () => {
+    let formData = await makeFormData();
+    await storeProduct(formData);
+}
 
 onMounted(() => {
     getCategories();
@@ -25,7 +48,7 @@ onMounted(() => {
                         <div class="container">
                             <div class="checkout__form">
                                 <h4>Add Product</h4>
-                                <form action="#">
+                                <form action="/upload" method="POST" enctype="multipart/form-data">
                                     <div class="row">
                                         <div class="col-lg-12 col-md-6">
                                             <div class="row">
@@ -69,7 +92,7 @@ onMounted(() => {
                                                         <input
                                                             type="text"
                                                             placeholder="Price"
-                                                            v-model="product.title"
+                                                            v-model="product.price"
                                                         >
                                                     </div>
                                                 </div>
@@ -79,7 +102,7 @@ onMounted(() => {
                                             <div class="row">
                                                 <div class="col-lg-10">
                                                     <div class="checkout__input">
-                                                        <p>Price<span>*</span></p>
+                                                        <p>Description<span>*</span></p>
                                                         <textarea
                                                             rows="4"
                                                             placeholder="Description"
@@ -89,11 +112,25 @@ onMounted(() => {
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="col-lg-12 col-md-6">
+                                            <div class="row">
+                                                <div class="col-lg-10">
+                                                    <div class="checkout__input">
+                                                        <p>Image<span>*</span></p>
+                                                        <input
+                                                            type="file"
+                                                            placeholder="Image"
+                                                            @change="getImage"
+                                                        >
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="col-lg-12 text-left">
                                             <button
                                                 type="submit"
                                                 class="site-btn"
-                                                @click.prevent="storeProduct"
+                                                @click.prevent="submitForm"
                                             >
                                                 ADD PRODUCT
                                             </button>
