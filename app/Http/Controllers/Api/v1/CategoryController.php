@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use App\Http\Resources\CategoryResource;
 use App\Models\Category;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
 class CategoryController extends Controller
@@ -15,6 +16,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        dd(Auth::user());
         return CategoryResource::collection(Category::all());
     }
 

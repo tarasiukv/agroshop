@@ -91,24 +91,18 @@ export default function useCategories() {
      * @returns {Promise<boolean>}
      */
     const storeCategory = async () => {
-        // let confirm_response = await swAlertsCustom.alertConfirm('Saving category', 'Save category?', 'Save', 'Cancel');
 
         // if (confirm_response) {
         console.log('!!!!!!!!  category.value')
         console.log(category.value)
             try {
                 let request_config = {
+                    headers: {
+                        'authorization': 'Bearer ' + localStorage.getItem('access_token')
+                    }
                 }
-
                 const response = await axios.post('/api/categories', category.value, request_config)
-
-                // toasterCustom.toastSuccess('New category added successfully');
-                // await router.push({name: 'a_categories_edit_route', params: {category_id: response.data.data.id}});
-                // setTimeout(() => {
-                //     location.reload()
-                // }, 2000)
             } catch (e) {console.log(e) }
-        // }
 
         return false;
     }
@@ -119,17 +113,13 @@ export default function useCategories() {
      */
     const updateCategory = async (id) => {
 
-        // let confirm_response = await swAlertsCustom.alertConfirm('Updating category', 'Save changes?', 'Save', 'Cancel');
-        // if (confirm_response) {
             try {
                 let request_config = {
                 }
 
                 const response = await axios.patch('/api/categories/' + id, category.value, request_config)
 
-                // toasterCustom.toastSuccess('Category updated successfully');
             } catch (e) { await checkBackendErrors(e) }
-        // }
 
         return false;
     }

@@ -4,11 +4,13 @@ import {useStore} from "vuex";
 
 import {useRouter} from "vue-router";
 import useCategories from "@composable/category.js";
+import useAuth from "@composable/auth.js";
 
 const router = useRouter();
 
 const {category, categories, storeCategory, getCategories} = useCategories();
 
+const { loginUser, logOutUser } = useAuth();
 
 const links = [
     {
@@ -143,7 +145,7 @@ onMounted(() => {
                             <div class="header__top__right__language">
                                 <a href="/login"><i class="fa fa-user"></i> Login</a>
                                     <ul>
-                                        <li><a href="/login">Login</a></li>
+                                        <li><a href="#" @click="logOutUser">Logout</a></li>
                                         <li><a href="/registration">Registation</a></li>
                                     </ul>
                             </div>
