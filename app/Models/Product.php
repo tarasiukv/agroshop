@@ -20,6 +20,8 @@ class Product extends Model
         'price',
         'file_path',
         'category_id',
+        'country',
+        'manufacturer',
     ];
 
     /**

@@ -37,6 +37,8 @@ class ProductsController extends Controller
                 'description' => $data['description'],
                 'price' => $data['price'],
                 'category_id' => $data['category_id'],
+                'country' => $data['country'],
+                'manufacturer' => $data['manufacturer'],
             ]);
             $file_path = FileService::store($file, $product);
             $product->file_path = $file_path;

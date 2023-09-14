@@ -18,12 +18,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::resource('users', UsersController::class);
-Route::resource('products', ProductsController::class);
+//Route::resource('products', ProductsController::class);
 //Route::resource('categories', CategoryController::class);
 
 
 Route::get('categories', [CategoryController::class, 'index']);
 Route::get('categories/{category}', [CategoryController::class, 'show']);
+
+Route::get('products', [ProductsController::class, 'index']);
+Route::get('products/{product}', [ProductsController::class, 'show']);
 
 Route::group(['middleware' => 'auth'], function ($router) {
     Route::get('categories/create', [CategoryController::class, 'create']);
@@ -31,6 +34,12 @@ Route::group(['middleware' => 'auth'], function ($router) {
     Route::get('categories/{category}/edit', [CategoryController::class, 'edit']);
     Route::put('categories/{category}', [CategoryController::class, 'update']);
     Route::delete('categories/{category}', [CategoryController::class, 'destroy']);
+
+    Route::get('products/create', [ProductsController::class, 'create']);
+    Route::post('products', [ProductsController::class, 'store']);
+    Route::get('products/{product}/edit', [ProductsController::class, 'edit']);
+    Route::put('products/{product}', [ProductsController::class, 'update']);
+    Route::delete('products/{product}', [ProductsController::class, 'destroy']);
 });
 
 

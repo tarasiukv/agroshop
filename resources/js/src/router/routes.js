@@ -10,6 +10,7 @@ import EditProductComponent from "@component/admin/products/EditProductComponent
 import ProductDetailComponent from "@component/pages/ProductDetailComponent.vue";
 import LogInComponent from "@component/users/LogInComponent.vue";
 import RegistrationComponent from "@component/users/RegistrationComponent.vue";
+import AboutComponent from "@component/pages/AboutComponent.vue";
 
 const routes = [
     {
@@ -27,6 +28,10 @@ const routes = [
     {
         path: '/cart',
         component: CartComponent
+    },
+    {
+        path: '/about',
+        component: AboutComponent
     },
     {
         path: '/shop/:id',

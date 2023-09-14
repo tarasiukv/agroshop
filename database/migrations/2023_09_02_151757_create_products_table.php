@@ -17,11 +17,12 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->decimal('price', 8,2)->nullable();
             $table->string('file_path')->nullable();
-//            $table->string('status');
             $table->foreignId('category_id')->nullable()
                 ->constrained('categories')
                 ->onUpdate('cascade')
                 ->nullOnDelete();
+            $table->string('country')->nullable();
+            $table->string('manufacturer')->nullable();
             $table->timestamps();
         });
     }

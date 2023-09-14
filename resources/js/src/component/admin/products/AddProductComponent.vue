@@ -20,6 +20,8 @@ const makeFormData = async () => {
     formData.append('price', product.value.price);
     formData.append('description', product.value.description);
     formData.append('img', file.value);
+    formData.append('country', product.value.country);
+    formData.append('manufacturer', product.value.manufacturer);
 
     return formData
 }
@@ -54,10 +56,10 @@ onMounted(() => {
                                             <div class="row">
                                                 <div class="col-lg-10">
                                                     <div class="checkout__input">
-                                                        <p>Title<span>*</span></p>
+                                                        <p>Назва<span>*</span></p>
                                                         <input
                                                             type="text"
-                                                            placeholder="Title"
+                                                            placeholder="Назва"
                                                             v-model="product.title"
                                                         >
                                                     </div>
@@ -68,7 +70,7 @@ onMounted(() => {
                                             <div class="row">
                                                 <div class="col-lg-10">
                                                     <div class="checkout__input">
-                                                        <p>Category</p>
+                                                        <p>Категорія</p>
                                                         <select class="checkout__input select"
                                                                 v-model="product.category_id"
                                                         >
@@ -88,10 +90,10 @@ onMounted(() => {
                                             <div class="row">
                                                 <div class="col-lg-10">
                                                     <div class="checkout__input">
-                                                        <p>Price<span>*</span></p>
+                                                        <p>Ціна<span>*</span></p>
                                                         <input
                                                             type="text"
-                                                            placeholder="Price"
+                                                            placeholder="Ціна"
                                                             v-model="product.price"
                                                         >
                                                     </div>
@@ -102,19 +104,47 @@ onMounted(() => {
                                             <div class="row">
                                                 <div class="col-lg-10">
                                                     <div class="checkout__input">
-                                                        <p>Description<span>*</span></p>
+                                                        <p>Опис<span>*</span></p>
                                                         <textarea
                                                             rows="4"
-                                                            placeholder="Description"
+                                                            placeholder="Опис"
                                                             v-model="product.description"
                                                         ></textarea>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                      <div class="col-lg-12 col-md-6">
+                                        <div class="row">
+                                          <div class="col-lg-10">
+                                            <div class="checkout__input">
+                                              <p>Країна<span>*</span></p>
+                                              <input
+                                                  type="text"
+                                                  placeholder="Країна"
+                                                  v-model="product.country"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-12 col-md-6">
+                                        <div class="row">
+                                          <div class="col-lg-10">
+                                            <div class="checkout__input">
+                                              <p>Виробник<span>*</span></p>
+                                              <input
+                                                  type="text"
+                                                  placeholder="Виробник"
+                                                  v-model="product.manufacturer"
+                                              />
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
                                         <div class="col-lg-12 col-md-6">
                                             <div class="row">
-                                                <div class="col-lg-10">
+                                                <div class="col-lg-3">
                                                     <div class="checkout__input">
                                                         <p>Image<span>*</span></p>
                                                         <input

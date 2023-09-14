@@ -220,4 +220,20 @@
         $button.parent().find('input').val(newVal);
     });
 
+    $(document).ready(function() {
+        // Отримайте поточний шлях сторінки
+        var currentPath = window.location.pathname;
+
+        // Визначте елементи меню, які відповідають поточному шляху
+        var menuItems = $('nav.header__menu ul li');
+
+        menuItems.each(function() {
+            var link = $(this).find('a');
+            if (link.attr('href') === currentPath) {
+                $(this).addClass('active');
+            }
+        });
+    });
+
+
 })(jQuery);

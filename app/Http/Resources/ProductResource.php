@@ -21,6 +21,8 @@ class ProductResource extends JsonResource
             'price' => $this->price,
             'file_path' => $this->file_path,
             'category_id' => $this->category_id,
+            'country' => $this->country,
+            'manufacturer' => $this->manufacturer,
             'created_at' => $this->created_at ? $this->created_at->format('d.m.Y, H:i') : null,
             'updated_at' => $this->updated_at ? $this->updated_at->format('d.m.Y, H:i') : null,
         ];

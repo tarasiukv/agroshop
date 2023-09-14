@@ -1,56 +1,10 @@
 <script setup>
-    import { computed, onMounted} from "vue";
-    import {useStore} from "vuex";
-
+    import { onMounted} from "vue";
     import {useRouter} from "vue-router";
     import useCategories from "@composable/category.js";
 
     const router = useRouter();
-
     const {category, categories, getCategories} = useCategories();
-
-
-    const links = [
-    {
-        title: "Home",
-        href: '/',
-    },
-    {
-        title: "Shop",
-        href: '/shop',
-        // subLinks: [
-        //     {
-        //         title: "Seed",
-        //         href: '/seed',
-        //     },
-        //     {
-        //         title: 'Means of protection',
-        //         href: '/meansOfProtection',
-        //     },
-        //     {
-        //         title: 'Fertilizers and soils',
-        //         href: '/fertilizersAndSoils'
-        //     }
-        // ]
-    },
-    {
-        title: "Contact",
-        href: '/contact',
-    },
-    ]
-
-    const store = useStore();
-
-    const counter = computed(() => {
-    return store.state.count;
-})
-
-    const myItem = '0';
-    const cartItem = '0';
-
-    const increment = () => {
-    store.commit('increment')
-}
 
     onMounted(() => {
     getCategories();
@@ -65,7 +19,7 @@
                     <div class="hero__categories">
                         <div class="hero__categories__all">
                             <i class="fa fa-bars"></i>
-                            <span>All departments</span>
+                            <span>Каталог</span>
                         </div>
                         <ul style="display: none">
                             <li
@@ -85,8 +39,8 @@
 <!--                                    All Categories-->
 <!--                                    <span class="arrow_carrot-down"></span>-->
 <!--                                </div>-->
-                                <input type="text" placeholder="What do yo u need?">
-                                <button type="submit" class="site-btn">SEARCH</button>
+                                <input type="text" placeholder="Що вам потрібно?">
+                                <button type="submit" class="site-btn">Пошук</button>
                             </form>
                         </div>
                         <div class="hero__search__phone">

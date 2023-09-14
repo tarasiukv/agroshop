@@ -26,8 +26,9 @@ class ProductRequest extends FormRequest
             'description' => 'nullable',
             'price' => 'nullable',
             'img' => 'nullable|image:jpg,jpeg,png',
-//            'status' => 'nullable',
             'category_id' => 'nullable',
+            'country' => 'nullable',
+            'manufacturer' => 'nullable',
         ];
     }
 }

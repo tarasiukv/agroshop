@@ -1,6 +1,5 @@
-import {ref, reactive, inject} from "vue";
+import {inject} from "vue";
 import {useRouter} from "vue-router";
-// import useBackendErrorsHelper from "./backend_errors_helper";
 import axios from "axios";
 
 export default function useAuth() {

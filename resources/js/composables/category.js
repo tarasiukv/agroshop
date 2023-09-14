@@ -91,10 +91,6 @@ export default function useCategories() {
      * @returns {Promise<boolean>}
      */
     const storeCategory = async () => {
-
-        // if (confirm_response) {
-        console.log('!!!!!!!!  category.value')
-        console.log(category.value)
             try {
                 let request_config = {
                     headers: {
@@ -115,6 +111,9 @@ export default function useCategories() {
 
             try {
                 let request_config = {
+                    headers: {
+                        'authorization': 'Bearer ' + localStorage.getItem('access_token')
+                    }
                 }
 
                 const response = await axios.patch('/api/categories/' + id, category.value, request_config)
@@ -130,17 +129,16 @@ export default function useCategories() {
      */
     const destroyCategory = async (id) => {
         if (id !== undefined) {
-            // let confirm_response = await swAlertsCustom.alertConfirm('Deleting category', 'Are you sure?', 'Delete', 'Cancel');
-            // if (confirm_response) {
                 try {
                     let request_config = {
+                        headers: {
+                            'authorization': 'Bearer ' + localStorage.getItem('access_token')
+                        }
                     }
                     const response = await axios.delete('/api/categories/' + id, request_config)
 
-                    // toasterCustom.toastSuccess('Category deleted');
                 } catch (e) { await checkBackendErrors(e) }
             }
-        // }
 
         return false;
     }

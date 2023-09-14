@@ -93,13 +93,12 @@ export default function useProducts() {
      */
     const storeProduct = async (formData) => {
         try {
-            console.log('formData')
-            console.log(formData)
-            const response = await axios.post('/api/products', formData, {
+            let request_config = {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
-                },
-            });
+                    'authorization': 'Bearer ' + localStorage.getItem('access_token')
+                }
+            };
+            const response = await axios.post('/api/products', formData, request_config)
 
             return response.data;
         } catch (error) {
